@@ -26,13 +26,11 @@ kernel_source = """
 def python_kernel(a, b, c):
     temp = a + b
     error = False
-    for i in range(len(a)):
-        if temp[i] != c[i]:
-            error = True
-    if error == True:
+    if np.array_equal(temp, c) == False:
         print "Error"
     else:
         print "Success!"
+
 
 def no_cpu_or_gpu():
     print "You have neither a CPU nor a GPU platform registered with PyOpenCL"
