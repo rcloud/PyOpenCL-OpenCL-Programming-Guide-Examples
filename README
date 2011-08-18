@@ -1,0 +1,13 @@
+In these scripts, i've attempted to follow the spirit of the example
+exercises of the OpenCL Programming Guide by Aaftab Munshi et al.
+
+These scripts were written as a learning exercise for me, and so
+they don't demonstrate a great deal of expertise.  I'm not attempting
+brevity, but rather the pythonic wisom that explicit is better than implicit.
+I've tried to explore the functionality of the OpenCL programming language and
+have enjoyed the ease of use provided by Andreas Kloeckner's PyOpenCL.
+
+Robert L. Cloud
+rcloud@gmail.com
+http://www.robertlouiscloud.com
+
