@@ -1,11 +1,41 @@
-In these scripts, i've attempted to follow the spirit of the example
-exercises of the OpenCL Programming Guide by Aaftab Munshi et al.
+These scripts were written as a learning exercise for me to learn OpenCL. 
+They were inspired by the excellent _OpenCL Programming Guide_ 
+by authors including Apple's Aaftab Munshi, AMD's  Benedict Gaster, 
+Intel's Timothy Mattson, NVIDIA's James Fung published July 2011
 
-These scripts were written as a learning exercise for me, and so
-they don't demonstrate a great deal of expertise.  I'm not attempting
-brevity, but rather the pythonic wisom that explicit is better than implicit.
-I've tried to explore the functionality of the OpenCL programming language and
-have enjoyed the ease of use provided by Andreas Kloeckner's PyOpenCL.
+I've been a fan of Andreas Kloeckner's work since 2009 and PyCUDA.  
+PyOpenCL provides a complete set of features for OpenCL 1.1(as of August 2011). 
+PyOpenCL provides a fantastic degree of brevity, starkly contrasted to 
+the burdensome boilerplate typically required in OpenCL applications written 
+with the C API.  I don't exploit all of the possible brevity, but during my learning
+phase, I lean on the pythonic wisdom that explicit is better than implicit.  
+
+This doesn't mean that I always go for the lengthiest solution possible, 
+but I'm attempting to strike what feels like a natural middle ground 
+between the possible verbosity(sometimes good for learners) and ease of coding(good for everyone).
+
+An example of this is that I launch kernels by calling them as methods to the 
+OpenCL program object rather than setting their arguments manually and
+enqueuing the execution.  
+
+Contents:
+    Hello World
+        Most of these scripts were written for execution on vertex, one of the most 
+        powerful on the UAB hospital network with a dual quad-core Xeon CPU and 
+        two NVIDIA GPUs, a Tesla 1060 and one minimal one for the display. 
+
+        There are thus two OpenCL platforms to choose from. Enumerating and querying
+        the devices is explored followed by a simple kernel for vector vector addition.
+        
+    laplace
+        Since undergrad, i've repeatedly used a simple Jacobian iteration solution to the laplace 
+        equation in order to learn about programming.  This method provides a nice balance
+        between a toy learning problem and one with actual use in scientific computing. 
+        I implement a steady state solver in two dimensional space using constants
+        provided in Chapra's textbook: _Numerical Methods for Engineers_ p. 856
+        
+
+August 2011
 
 Robert L. Cloud
 rcloud@gmail.com
